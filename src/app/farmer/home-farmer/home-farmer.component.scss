@@ -1,0 +1,219 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 1200px; /* Can be adjusted as needed */
+    margin: 0 auto;
+    padding: 20px;
+   
+    margin-left: 180px; /* Sidebar এর সমান মার্জিন দিবে */
+    padding: 10px;
+    width: calc(100% - 180px); /* Sidebar বাদ দিয়ে পুরো জায়গা নেবে */
+    
+  }
+  
+  /* Section Styling */
+  .section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #00ff4c;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #0c5509;
+    padding: 15px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .logo h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .buyer-dashboard {
+    font-size: 0.9rem;
+    color: #d4f5d4;
+    text-decoration: none;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .buyer-dashboard:hover {
+    color: #ffffff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    width: 200px;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content li {
+    list-style: none;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .buyer-dashboard:hover + .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-bar {
+    width: 700px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-bar::placeholder {
+    color: #aaa;
+  }
+  
+  .search-bar:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .extra-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .extra-links img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .bi-bag-fill {
+    cursor: pointer;
+  }
+  
+  .language-select {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .login-link {
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .login-link:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Navigation Bar Styling */
+  nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #0056b3;
+  }

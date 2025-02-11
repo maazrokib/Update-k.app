@@ -1,0 +1,51 @@
+<app-farmer-dashboard></app-farmer-dashboard>
+<div class="product-delivery-form container" container>
+  <h2>{{ editedDelivery ? 'Edit Delivery Request' : 'Add Delivery Request' }}</h2>
+  <form (ngSubmit)="submitDeliveryForm()">
+    <div class="form-group">
+      <label for="productName">Product Name:</label>
+      <input id="productName" type="text" [(ngModel)]="deliveryForm.productName" name="productName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="deliveryAddress">Delivery Address:</label>
+      <input id="deliveryAddress" type="text" [(ngModel)]="deliveryForm.deliveryAddress" name="deliveryAddress"
+        required />
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" type="number" [(ngModel)]="deliveryForm.quantity" name="quantity" required />
+    </div>
+
+    <div class="form-group">
+      <label for="deliveryDate">Delivery Date:</label>
+      <input id="deliveryDate" type="date" [(ngModel)]="deliveryForm.deliveryDate" name="deliveryDate" required />
+    </div>
+
+    <div class="form-group">
+      <label for="deliveryContact">Contact Number:</label>
+      <input id="deliveryContact" type="tel" [(ngModel)]="deliveryForm.contactNumber" name="contactNumber" required />
+    </div>
+
+    <button type="submit" class="submit-btn">
+      {{ editedDelivery ? 'Update' : 'Submit' }} Delivery Request
+    </button>
+    <button type="button" class="cancel-btn" (click)="resetForm()" *ngIf="editedDelivery">
+      Cancel
+    </button>
+  </form>
+</div>
+
+<div class="delivery-list container">
+  <h2>Delivery Requests</h2>
+  <div *ngFor="let delivery of deliveries" class="delivery-card">
+    <p><strong>Product Name:</strong> {{ delivery.productName }}</p>
+    <p><strong>Delivery Address:</strong> {{ delivery.deliveryAddress }}</p>
+    <p><strong>Quantity:</strong> {{ delivery.quantity }}</p>
+    <p><strong>Delivery Date:</strong> {{ delivery.deliveryDate | date }}</p>
+    <p><strong>Contact Number:</strong> {{ delivery.contactNumber }}</p>
+    <button (click)="editDelivery(delivery)">Edit</button>
+    <button (click)="deleteDelivery(delivery.id)">Delete</button>
+  </div>
+</div>

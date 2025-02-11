@@ -1,0 +1,116 @@
+/* Top-level container for the admin dashboard */
+
+  
+  /* Modal header styling */
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 280px; /* Sidebar এর সমান মার্জিন দিবে */
+    margin-right: 100px; /* Sidebar এর সমান মার্জিন দিবে */
+  }
+  .nav {
+    background: green;
+    margin-left: 280px; /* Sidebar এর সমান মার্জিন দিবে */
+    margin-right: 100px; /* Sidebar এর সমান মার্জিন দিবে */
+  }
+  .modal-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .modal-header button.close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-header button.close:hover {
+    opacity: 0.8;
+  }
+  
+  /* Modal body styling */
+  .modal-body {
+    padding: 20px;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Submit button styling */
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .btn-success:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .btn-success:hover:not(:disabled) {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Row and column spacing */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0.5rem;
+  }
+  
+  /* Textarea styling */
+  textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+  }

@@ -1,0 +1,45 @@
+
+.container {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.product-delivery-form {
+  margin-bottom: 2rem;
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+}
+
+.delivery-list {
+  .delivery-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    button {
+      margin-right: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

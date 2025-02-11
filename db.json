@@ -1,0 +1,128 @@
+{
+  "products": [
+    {
+      "id": "37ec",
+      "name": "alu ",
+      "categoryId": "sobji",
+      "price": 5,
+      "quantity": "5 kg",
+      "productCondition": "New",
+      "description": "valo",
+      "imageUrl": "https://www.google.com/imgres?q=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Di%26url%3Dhttps%253A%252F%252Fwww.shutterstock.com%252Fsearch%252Fhouse-rental-logo%26psig%3DAOvVaw0fOeykU9keyYm0KPaafqNx%26ust%3D1736791567374000%26source%3Dimages%26cd%3Dvfe%26opi%3D89978449%26ved%3D0CBQQjRxqFwoTCLCr3_fi8IoDFQAAAAAdAAAAABAE&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-photo%2Fresearch-strategy-buying-selling-renting-600nw-2506331651.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Falquiler&docid=JiMvwZ7F4Od2wM&tbnid=DRhJiAkVVy8bqM&vet=12ahUKEwi2kICH4_CKAxXTxzgGHY-SEzQQM3oECGYQAA..i&w=600&h=306&hcb=2&itg=1&ved=2ahUKEwi2kICH4_CKAxXTxzgGHY-SEzQQM3oECGYQAA"
+    },
+    {
+      "id": "cb71",
+      "name": "ASssssssssssssss",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
+      "imageUrl": "https://www.google.com/imgres?q=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Di%26url%3Dhttps%253A%252F%252Fwww.shutterstock.com%252Fsearch%252Fhouse-rental-logo%26psig%3DAOvVaw0fOeykU9keyYm0KPaafqNx%26ust%3D1736791567374000%26source%3Dimages%26cd%3Dvfe%26opi%3D89978449%26ved%3D0CBQQjRxqFwoTCLCr3_fi8IoDFQAAAAAdAAAAABAE&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-photo%2Fresearch-strategy-buying-selling-renting-600nw-2506331651.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Falquiler&docid=JiMvwZ7F4Od2wM&tbnid=DRhJiAkVVy8bqM&vet=12ahUKEwi2kICH4_CKAxXTxzgGHY-SEzQQM3oECGYQAA..i&w=600&h=306&hcb=2&itg=1&ved=2ahUKEwi2kICH4_CKAxXTxzgGHY-SEzQQM3oECGYQAA"
+    },
+    {
+      "id": "380f",
+      "name": "ASssssssssssssss",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
+      "imageUrl": "gffffffffffffffffffffffffffffff"
+    },
+    {
+      "id": "b1e2",
+      "name": "saaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "sa",
+      "imageUrl": "gffffffffffffffffffffffffffffff"
+    },
+    {
+      "id": "40ce",
+      "name": "saaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
+      "imageUrl": "gffffffffffffffffffffffffffffff"
+    }
+  ],
+  "auth": [
+    {
+      "id": "bbef",
+      "farmerId": 1,
+      "productName": "gghjagdja",
+      "description": "cxcxc",
+      "price": 0,
+      "stockQuantity": 0,
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png",
+      "category": "sobji",
+      "sellerName": "dfsdfds",
+      "productCondition": "dddd",
+      "deliveryInfo": "dsfdf",
+      "discount": 0,
+      "validUntil": "2025-02-18",
+      "features": "cxc"
+    },
+    {
+      "id": "bac0",
+      "farmerId": 1,
+      "productName": "gghjagdja",
+      "description": "d",
+      "price": 1,
+      "stockQuantity": 1,
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png",
+      "category": "sobji",
+      "sellerName": "dfsdfds",
+      "productCondition": "dddd",
+      "deliveryInfo": "dsfdf",
+      "discount": 1,
+      "validUntil": "2025-02-08",
+      "features": "d"
+    },
+    {
+      "id": "82c4",
+      "name": "ASssssssssssssss",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+    },
+    {
+      "id": "7123",
+      "name": "ASssssssssssssss",
+      "categoryId": "2",
+      "price": 6,
+      "quantity": "2",
+      "productCondition": "New",
+      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+    },
+    {
+      "id": "06ec",
+      "name": "ASssssssssssssss",
+      "categoryId": "sobji",
+      "price": 1,
+      "quantity": 1,
+      "productCondition": "New",
+      "description": "asd",
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+    },
+    {
+      "id": "9cd3",
+      "name": "ASssssssssssssss",
+      "categoryId": "sobji",
+      "price": 2,
+      "quantity": 2,
+      "productCondition": "New",
+      "description": "g",
+      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+    }
+  ]
+}

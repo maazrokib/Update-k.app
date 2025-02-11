@@ -1,0 +1,78 @@
+$primary-color: #28a745;
+$secondary-color: #2c3e50;
+$background-color: #f9f9f9;
+$text-color: #333;
+$card-bg: #ffffff;
+$border-radius: 8px;
+$padding: 20px;
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.farming-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $padding;
+  background-color: $card-bg;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.page-title {
+  text-align: center;
+  color: $secondary-color;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story-item {
+  background-color: $card-bg;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .story-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .farmer-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+
+    .farmer-info {
+      .farmer-name {
+        font-size: 1.2rem;
+        color: $secondary-color;
+        margin: 0;
+      }
+
+      .story-date {
+        color: $text-color;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .story-text {
+    font-size: 1rem;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0;
+  }
+}

@@ -1,0 +1,101 @@
+<div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Product</h5>
+          <button type="button" class="btn-close" (click)="closeModal()">×</button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <!-- Product Name -->
+            <div class="form-group">
+              <label for="name">Product Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                formControlName="name"
+                placeholder="Enter product name"
+              />
+            </div>
+  
+            <!-- Category -->
+            <div class="form-group">
+              <label for="categoryId">Category</label>
+              <input
+                type="text"
+                id="categoryId"
+                class="form-control"
+                formControlName="categoryId"
+                placeholder="Enter category"
+              />
+            </div>
+  
+            <!-- Price -->
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                type="number"
+                id="price"
+                class="form-control"
+                formControlName="price"
+                placeholder="Enter price"
+              />
+            </div>
+  
+            <!-- Quantity -->
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input
+                type="number"
+                id="quantity"
+                class="form-control"
+                formControlName="quantity"
+                placeholder="Enter quantity"
+              />
+            </div>
+  
+            <!-- Condition -->
+            <div class="form-group">
+              <label for="productCondition">Condition</label>
+              <select id="productCondition" class="form-control" formControlName="productCondition">
+                <option value="New">New</option>
+                <option value="Used">Used</option>
+              </select>
+            </div>
+  
+            <!-- Description -->
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                class="form-control"
+                formControlName="description"
+                placeholder="Enter description"
+              ></textarea>
+            </div>
+  
+            <!-- Image URL -->
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input
+                type="text"
+                id="imageUrl"
+                class="form-control"
+                formControlName="imageUrl"
+                placeholder="Enter image URL"
+              />
+            </div>
+  
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">
+              Update Product
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,79 @@
+<header>
+  <div class="header-container">
+
+    <div class="logo-section">
+      <div class="logo">
+        <h2>Krishi Kontho</h2>
+        <div class="icons">
+          <img src="https://cdn-icons-png.flaticon.com/512/9203/9203764.png" alt="Profile Picture" class="profile-pic">
+          <div class="dropdown">
+            <button class="buyer-dashboard-btn">Buyer Dashboard</button>
+            <ul class="dropdown-menu">
+              <li><a href="/buyer/profile">profile </a></li>
+              <li><a href="/buyer/order-list">Order List</a></li>
+              <li><a href="/buyer/wish">Wish List</a></li>
+              <li><a href="/buyer/feedback-story">Delivery list</a></li>
+              <li><a href="/buyer/feedback-story">Feedback</a></li>
+              <li><a href="/buyer/contract">Contract Us</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <ul class="dropdown-content">
+        <li><a routerLink="/buyer/profile">Profile</a></li>
+        <li><a routerLink="/buyer/order-list">Your Delivery</a></li>
+        <li><a routerLink="/buyer/order-history">Order History</a></li>
+        <li><a routerLink="/buyer/feedback-story">Feedback Story</a></li>
+        <li><a routerLink="/buyer/contact-us">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="header-right">
+      <input type="text" class="search-bar" placeholder="Search..." />
+      <div class="extra-links">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#f9fcff" class="bi bi-bag-fill" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
+        </svg>
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#f9fcff" class="bi bi-bell-fill" viewBox="0 0 16 16">
+          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+        </svg>
+
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+        </a>
+
+
+        <select class="language-select">
+          <option value="en">English</option>
+          <option value="bn">বাংলা</option>
+          <option value="hi">हिंदी</option>
+        </select>
+
+        <a routerLink="/login" class="login-link">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a routerLink="/buyer/home">Home</a>
+  <a routerLink="/seasonal">Seasonal</a>
+  <a routerLink="/bundle">Bundle</a>
+  <a routerLink="/newest">Newest</a>
+  <a routerLink="/trending">Trending</a>
+  <a routerLink="/great-deal">Great Deal</a>
+  <a routerLink="/upcoming">Upcoming</a>
+  <a routerLink="/category">Category</a>
+  <a routerLink="/farmer-story">Farmer Story</a>
+  <a routerLink="/krishi-story">Krishi Story</a>
+</nav>
+
+<router-outlet></router-outlet>

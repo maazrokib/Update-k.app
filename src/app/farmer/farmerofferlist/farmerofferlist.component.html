@@ -1,0 +1,15 @@
+<app-farmer-dashboard></app-farmer-dashboard>
+<div class="offer-list">
+  <h2>Offer List</h2>
+  <div *ngFor="let offer of offers" class="offer-card">
+    <img [src]="offer.imageUrl" alt="Product Image" />
+    <h3>{{ offer.productName }}</h3>
+    <p>{{ offer.description }}</p>
+    <p><strong>Price:</strong> {{ offer.price | currency }}</p>
+    <p><strong>Stock Quantity:</strong> {{ offer.stockQuantity }}</p>
+    <p><strong>Condition:</strong> {{ offer.productCondition }}</p>
+    <p><strong>Valid Until:</strong> {{ offer.validUntil | date }}</p>
+    <button (click)="editOffer(offer.id)">Edit</button>
+    <button (click)="deleteOffer(offer.id)">Delete</button>
+  </div>
+</div>

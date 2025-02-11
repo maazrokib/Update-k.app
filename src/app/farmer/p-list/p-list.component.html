@@ -1,0 +1,33 @@
+<app-farmer-dashboard></app-farmer-dashboard>
+<div class="container">
+  <h2 class="title">Product List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Condition</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.categoryId }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.productCondition }}</td>
+        <td>{{ product.description }}</td>
+        <td>
+          <button class="btn btn-edit" (click)="editProduct(product.id)">Edit</button> 
+          <button class="btn btn-delete" (click)="delete(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

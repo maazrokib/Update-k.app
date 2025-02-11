@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    height: 100%;
+    width:180px;
+    background-color: #0f630c; // Green for farming context
+    padding: 1rem 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+
+      li {
+        margin: 0;
+
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 1rem;
+          color: #ffffff;
+          font-size: 1rem;
+          font-weight: bold;
+          transition: background-color 0.3s, padding-left 0.3s;
+
+          &:hover {
+            background-color: #145a32; // Dark green hover effect
+            padding-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  router-outlet {
+    margin-left: 250px;
+    padding: 2rem;
+  }

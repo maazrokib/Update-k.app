@@ -1,0 +1,56 @@
+/* offer-list.component.css or a global stylesheet */
+.offer-list {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
+  }
+  
+  .offer-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within the card */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    height: 100%; /* Make cards equal height */
+  }
+  
+  .offer-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .offer-card h3 {
+    margin-top: 0;
+  }
+  
+  .offer-card p {
+    margin-bottom: 5px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push buttons to the bottom */
+  }
+  
+  .button-group button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  

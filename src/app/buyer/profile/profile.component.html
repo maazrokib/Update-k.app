@@ -1,0 +1,64 @@
+<app-buyer-nav></app-buyer-nav>
+<body>
+  <div class="profile-container">
+    <!-- Profile Header -->
+    <div *ngIf="!isProfileEdited" class="profile-header">
+      <h2>Enter Your Profile Information</h2>
+      <form (ngSubmit)="saveProfile()">
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="profile.name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="profile.email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" [(ngModel)]="profile.phone" name="phone" required>
+
+        <label for="location">Location:</label>
+        <input id="location" [(ngModel)]="profile.location" name="location" required>
+
+        <label for="joined">Joined:</label>
+        <input id="joined" [(ngModel)]="profile.joined" name="joined" required>
+
+        <label for="totalPurchases">Total Purchases:</label>
+        <input id="totalPurchases" [(ngModel)]="profile.totalPurchases" name="totalPurchases" required>
+
+        <label for="image">Profile Image:</label>
+        <input type="file" id="image" (change)="onImageChange($event)" accept="image/*">
+
+        <button type="submit" class="btn-save">Save Profile</button>
+      </form>
+    </div>
+
+    <!-- Profile Details (after form submission) -->
+    <div *ngIf="isProfileEdited" class="profile-header">
+      <div class="profile-info">
+        <h1 class="profile-name">{{ profile.name }}</h1>
+        <p class="profile-email">{{ profile.email }}</p>
+        <p class="profile-phone">{{ profile.phone }}</p>
+        <img *ngIf="profile.imageUrl" [src]="profile.imageUrl" alt="Profile Image" class="profile-image">
+      </div>
+    </div>
+
+    <div *ngIf="isProfileEdited" class="profile-details">
+      <h2>Buyer Information</h2>
+      <div class="details-item">
+        <span class="label">Location:</span>
+        <span class="value">{{ profile.location }}</span>
+      </div>
+      <div class="details-item">
+        <span class="label">Joined:</span>
+        <span class="value">{{ profile.joined }}</span>
+      </div>
+      <div class="details-item">
+        <span class="label">Total Purchases:</span>
+        <span class="value">{{ profile.totalPurchases }}</span>
+      </div>
+    </div>
+
+    <div *ngIf="isProfileEdited" class="profile-actions">
+      <button class="btn-edit" (click)="editProfile()">Edit Profile</button>
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>

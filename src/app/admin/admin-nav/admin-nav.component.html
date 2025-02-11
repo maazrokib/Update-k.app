@@ -1,0 +1,38 @@
+
+<nav>
+  <div class="logo">
+    Krishi Kontho <br>
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+    </svg>
+    <a routerLink="/admin">Admin Dashboard</a>
+  </div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/admin/home">Home</a></li>
+     <li><a routerLink="/admin/buyer-list">BuyerList</a></li>
+    <li><a routerLink="/admin/farmer-list">Farmer List</a></li>
+    <li>  <a routerLink="/hg">Marcket Price</a></li>
+    <li><a routerLink="/farmer">Farmer Dashboard</a></li>
+    <li><a routerLink="/buyer">Buyer Dashboard</a></li>
+    <li><a routerLink="/sign-up">Sign Up</a></li>
+    <li><a routerLink="/login">Login</a></li>
+  </ul>
+
+  <div class="extra-links">
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+    </a>
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+    </a>
+    <input type="text" class="search-bar" placeholder="Search..." />
+    <select class="language-select">
+      <option value="en">English</option>
+      <option value="bn">বাংলা</option>
+      <option value="hi">हिंदी</option>
+    </select>
+  </div>
+</nav>
+<router-outlet></router-outlet>

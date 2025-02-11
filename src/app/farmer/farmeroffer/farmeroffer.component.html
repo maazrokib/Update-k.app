@@ -1,0 +1,67 @@
+<app-farmer-dashboard></app-farmer-dashboard>
+<div class="create-offer-form">
+  <h2>Create a New Offer</h2>
+  <form (ngSubmit)="createOffer()">
+    <div>
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" [(ngModel)]="newOffer.productName" name="productName" required>
+    </div>
+
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="newOffer.description" name="description" required></textarea>
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" id="price" [(ngModel)]="newOffer.price" name="price" required>
+    </div>
+
+    <div>
+      <label for="stockQuantity">Stock Quantity:</label>
+      <input type="number" id="stockQuantity" [(ngModel)]="newOffer.stockQuantity" name="stockQuantity" required>
+    </div>
+
+    <div>
+      <label for="imageUrl">Image URL:</label>
+      <input type="text" id="imageUrl" [(ngModel)]="newOffer.imageUrl" name="imageUrl">
+    </div>
+
+    <div>
+      <label for="category">Category:</label>
+      <input type="text" id="category" [(ngModel)]="newOffer.category" name="category" required>
+    </div>
+
+    <div>
+      <label for="sellerName">Seller Name:</label>
+      <input type="text" id="sellerName" [(ngModel)]="newOffer.sellerName" name="sellerName" required>
+    </div>
+
+    <div>
+      <label for="productCondition">Product Condition:</label>
+      <input type="text" id="productCondition" [(ngModel)]="newOffer.productCondition" name="productCondition" required>
+    </div>
+
+    <div>
+      <label for="deliveryInfo">Delivery Info:</label>
+      <input type="text" id="deliveryInfo" [(ngModel)]="newOffer.deliveryInfo" name="deliveryInfo" required>
+    </div>
+
+    <div>
+      <label for="discount">Offer Discount (%):</label>
+      <input type="number" id="discount" [(ngModel)]="newOffer.discount" name="discount" required>
+    </div>
+
+    <div>
+      <label for="validUntil">Offer Valid Until:</label>
+      <input type="date" id="validUntil" [(ngModel)]="newOffer.validUntil" name="validUntil" required>
+    </div>
+
+    <div>
+      <label for="features">Special Features:</label>
+      <textarea id="features" [(ngModel)]="newOffer.features" name="features"></textarea>
+    </div>
+
+    <button type="submit">Create Offer</button>
+  </form>
+</div>

@@ -1,0 +1,177 @@
+header {
+  background-image: url('/assets/pexels-nc-farm-bureau-mark-2255935.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #1fa01b;
+}
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #a3cfa5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Carousel Section */
+#product-carousel {
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 20%; /* 5 items in a row */
+  text-align: center;
+  padding: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(184, 27, 27, 0.1);
+}
+
+.carousel-item p {
+  margin-top: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Offer and Product Cards */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offer-card, .product-card {
+  background-color: rgb(47, 120, 70);
+  width: 18%; /* Adjust width for 5 cards per row */
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* কার্ডের পুরো প্রস্থ */
+  max-width: 300px; /* আপনার কার্ডের সর্বাধিক প্রস্থ */
+  margin: 10px auto;
+  text-align: center;
+}
+  
+
+.offer-card:hover, .product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+  width: 100%; /* ছবির প্রস্থ পুরোপুরি কার্ডের প্রস্থের সাথে মানানসই হবে */
+  height: 200px; /* ছবির উচ্চতা নির্ধারণ */
+  object-fit: cover; /* ছবির অনুপাত ধরে রেখে পূর্ণতর করে ফিট হবে */
+  border-radius: 8px; 
+}
+
+h3 {
+  color: #333;
+  margin-top: 10px;
+}
+
+p {
+  color: #777;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0f630c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+.product-cards {
+  /* ছবি গুলি একসাথে একই আকারে দেখানোর জন্য */
+  width: 100%; /* কার্ডের পুরো প্রস্থ */
+  max-width: 300px; /* আপনার কার্ডের সর্বাধিক প্রস্থ */
+  margin: 10px auto;
+  text-align: center;
+}
+
+.card img {
+  width: 100%; /* ছবির প্রস্থ পুরোপুরি কার্ডের প্রস্থের সাথে মানানসই হবে */
+  height: 200px; /* ছবির উচ্চতা নির্ধারণ */
+  object-fit: cover; /* ছবির অনুপাত ধরে রেখে পূর্ণতর করে ফিট হবে */
+  border-radius: 8px; /* কোণ গোলাকৃতির করবে */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.card-body {
+  padding: 10px;
+}

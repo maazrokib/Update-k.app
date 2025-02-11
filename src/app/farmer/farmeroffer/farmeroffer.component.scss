@@ -1,0 +1,132 @@
+/* General Styles */
+.container {
+  width: 50%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Offer List Styles */
+.offer-list {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+.offer-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.offer-card h3 {
+  font-size: 22px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.product-image {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.offer-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.offer-card p strong {
+  color: #333;
+}
+
+.offer-card img {
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Create Offer Form Styles */
+.create-offer-form {
+  padding: 30px;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-offer-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-offer-form div {
+  margin-bottom: 20px;
+}
+
+.create-offer-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.create-offer-form button {
+  width: 100%;
+  font-size: 18px;
+}

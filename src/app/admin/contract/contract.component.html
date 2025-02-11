@@ -1,0 +1,38 @@
+<div class="contract-container">
+  <h2>Contract with Us</h2>
+
+  <!-- Farmer Information -->
+  <div class="farmer-info">
+
+    <p><strong>Email:</strong> {{ farmer.email }}</p>
+    <p><strong>Phone:</strong>
+      <span class="phone-number" (click)="makeCall(farmer.phone)">
+        {{ farmer.phone }}
+      </span>
+      <i class="fas fa-phone-alt" (click)="makeCall(farmer.phone)"></i>
+    </p>
+  </div>
+
+  <!-- Message Form -->
+  <div class="message-form">
+    <h3>Send a Message</h3>
+    <textarea [(ngModel)]="message" placeholder="Type your message here..." rows="5"></textarea>
+
+    <div class="file-upload">
+      <input type="file" (change)="onImageUpload($event)">
+    </div>
+
+    <button (click)="sendMessage()">Send Message</button>
+  </div>
+
+  <!-- Display Sent Messages -->
+  <div *ngIf="sentMessages.length > 0" class="sent-messages">
+    <h3>Messages</h3>
+    <ul>
+      <li *ngFor="let msg of sentMessages">
+        <p><strong>{{ msg.sender }}:</strong> {{ msg.text }}</p>
+        <img *ngIf="msg.image" [src]="msg.image" alt="Sent Image" class="message-image"/>
+      </li>
+    </ul>
+  </div>
+</div>

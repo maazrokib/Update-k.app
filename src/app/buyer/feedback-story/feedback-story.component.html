@@ -1,0 +1,104 @@
+<app-buyer-nav></app-buyer-nav>
+<body>
+  <div class="feedback-container">
+    <h1 class="page-title">Customer Feedback Stories</h1>
+    <!-- Feedback List -->
+    <div class="feedback-list">
+      <div class="feedback-item">
+        <div class="feedback-header">
+          <img src="customer1.jpg" alt="Customer 1" class="customer-img">
+          <div class="customer-info">
+            <h3 class="customer-name">John Doe</h3>
+            <p class="feedback-date">March 2024</p>
+          </div>
+        </div>
+        <p class="feedback-text">"I had an amazing experience! The service was fast and the quality of the product exceeded my expectations. Highly recommend!"</p>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-header">
+          <img src="customer2.jpg" alt="Customer 2" class="customer-img">
+          <div class="customer-info">
+            <h3 class="customer-name">Jane Smith</h3>
+            <p class="feedback-date">February 2024</p>
+          </div>
+        </div>
+        <p class="feedback-text">"The customer service was exceptional. I received the product within 3 days and it was just as described. Will definitely buy again!"</p>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-header">
+          <img src="customer3.jpg" alt="Customer 3" class="customer-img">
+          <div class="customer-info">
+            <h3 class="customer-name">Sarah Lee</h3>
+            <p class="feedback-date">January 2024</p>
+          </div>
+        </div>
+        <p class="feedback-text">"I had a small issue with my order, but customer support quickly resolved it. Great product, great team!"</p>
+      </div>
+      <!-- Add more feedback items as needed -->
+    </div>
+  </div>
+<!-- <app-buyer-dashboard></app-buyer-dashboard> -->
+</body>
+<div class="header flex w-full items-center justify-start px-2.5 py-1.5 text-white 2xl:container lg:px-5 2xl:mx-auto 2xl:px-2">
+  <!-- Mobile Navigation Button -->
+  <label class="lg:hidden w-4 mr-2" for="isShowMobileNav">
+    <span class="icon icon-bars mobile-ham"></span>
+  </label>
+
+  <!-- Logo -->
+  <a class="app-logo w-[70px] lg:w-[120px]" href="/">
+    <img alt="Shwapno" fetchpriority="high" width="116" height="55" decoding="async" data-nimg="1" class="w-full h-auto max-w-[70px] lg:max-w-[120px] transition-all duration-300 ease-linear" style="color:transparent;width:auto" src="/images/shwapno_logo.png">
+  </a>
+
+  <!-- Delivery Location -->
+  <div class="relative z-[99] ml-auto hidden min-w-[180px] max-w-[220px] cursor-pointer md:block xl:ml-10 2xl:ml-auto">
+    <button class="h-[35px] w-full items-center rounded-sm border border-solid border-light px-2 py-1 outline-none md:flex" title="Today: 1PM - 2PM" type="button" aria-expanded="false">
+      <img alt="delivery" loading="lazy" width="20" height="12" decoding="async" data-nimg="1" src="https://d2t8nl1y0ie1km.cloudfront.net/public/delivery.svg" style="color: transparent;">
+      <span class="block overflow-hidden text-ellipsis pl-2 text-left text-xs leading-none">Select your delivery location</span>
+    </button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="header-search bg-transparent mx-auto w-1/2 max-w-[calc(100%-155px)] lg:max-w-[calc(100%-800px)] 2xl:max-w-[calc(100%-860px)] xl:w-[43%] 2xl:w-[726px] text-[0px] relative md:shadow-search">
+    <div class="flex-row">
+      <input class="text-ellipsis bg-white text-black rounded-full md:rounded-md w-full p-0 pl-2 pr-6 md:pr-14 text-[10px] md:text-xs outline-none min-h-[24px] h-[7.5vw] max-h-8 md:max-h-9 md:h-9" placeholder="Search your products" id="search-input" type="text" name="search" value="">
+    </div>
+    <div class="flex items-center absolute top-1/2 -translate-y-1/2 leading-none right-2.5 w-auto h-6 md:h-9 md:bg-yellow md:px-4 md:py-1.5 md:right-0 md:rounded-r-md">
+      <picture>
+        <source srcset="https://d2t8nl1y0ie1km.cloudfront.net/public/desktop-search.svg" media="(min-width:768px)">
+        <img alt="logo" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="w-3 md:w-5 h-auto" style="color:transparent" src="https://d2t8nl1y0ie1km.cloudfront.net/public/search.svg">
+      </picture>
+    </div>
+  </div>
+
+  <!-- App Download Button -->
+  <div class="mr-5 hidden overflow-hidden rounded-[3px] md:w-[90px] lg:block lg:w-[170px] 2xl:mr-auto">
+    <a class="hidden lg:block" href="/">
+      <img alt="app_download" loading="lazy" width="175" height="40" decoding="async" data-nimg="1" style="color:transparent" src="https://d2t8nl1y0ie1km.cloudfront.net/public/app-download.png">
+    </a>
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="mr-1.5 hidden lg:block">
+    <button type="button" class="hidden lg:block hover:border text-sm font-medium lg:w-[68px] px-1 whitespace-nowrap overflow-hidden text-ellipsis leading-none lg:text-white lg:border lg:border-solid lg:border-light h-[28px] lg:h-[36px] lg:rounded-[5px] hover:lg:bg-light">বাংলা</button>
+    <button type="button" class="flex lg:hidden items-center lg:border-0 border-2 border-main rounded-[10px] overflow-hidden">
+      <span class="block py-1.5 px-2.5 text-xs font-medium rounded-[10px] leading-none transition-all duration-300 -ml-[2px] !bg-main !text-white">English</span>
+      <span class="block py-1.5 px-2.5 text-xs font-medium rounded-[10px] leading-none transition-all duration-300 -mr-[2px]">বাংলা</span>
+    </button>
+  </div>
+
+  <!-- User Account Button -->
+  <div class="relative z-50 leading-none">
+    <button class="items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap pl-1 text-sm leading-none lg:flex lg:h-[36px] lg:rounded-[5px] lg:border lg:border-solid lg:border-light lg:px-2 lg:text-white hover:lg:bg-light xl:max-w-[148px]" aria-label="User Account Button" type="button">
+      <span class="icon icon-user mr-2 text-base leading-none"></span>
+      <span class="hidden max-w-[160px] text-ellipsis whitespace-nowrap text-xs font-medium lg:block">md</span>
+    </button>
+  </div>
+
+  <!-- Mobile User Settings -->
+  <div class="relative z-50">
+    <button class="flex h-6 items-center border-0 pl-3 pr-2 text-sm outline-none lg:hidden" aria-label="User Settings" type="button">
+      <img alt="User Dot" loading="lazy" width="4" height="16" decoding="async" data-nimg="1" class="h-auto w-auto" src="/dot.svg" style="color: transparent;">
+    </button>
+  </div>
+</div>
