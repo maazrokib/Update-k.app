@@ -53,76 +53,94 @@
   ],
   "auth": [
     {
-      "id": "bbef",
-      "farmerId": 1,
-      "productName": "gghjagdja",
-      "description": "cxcxc",
-      "price": 0,
-      "stockQuantity": 0,
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png",
-      "category": "sobji",
-      "sellerName": "dfsdfds",
-      "productCondition": "dddd",
-      "deliveryInfo": "dsfdf",
-      "discount": 0,
-      "validUntil": "2025-02-18",
-      "features": "cxc"
-    },
-    {
-      "id": "bac0",
-      "farmerId": 1,
-      "productName": "gghjagdja",
-      "description": "d",
-      "price": 1,
-      "stockQuantity": 1,
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png",
-      "category": "sobji",
-      "sellerName": "dfsdfds",
-      "productCondition": "dddd",
-      "deliveryInfo": "dsfdf",
-      "discount": 1,
-      "validUntil": "2025-02-08",
-      "features": "d"
-    },
-    {
-      "id": "82c4",
-      "name": "ASssssssssssssss",
-      "categoryId": "2",
-      "price": 6,
-      "quantity": "2",
+      "id": "c013",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 3,
       "productCondition": "New",
-      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+      "description": "good food ",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50HesumGypsSFoKTWZ9rMbhfCrX5TqNMhDg&s"
     },
     {
-      "id": "7123",
-      "name": "ASssssssssssssss",
-      "categoryId": "2",
-      "price": 6,
-      "quantity": "2",
+      "id": "aa04",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 3,
       "productCondition": "New",
-      "description": "ytfygjgoiuog8gygyuohiihuhuygiuygugjfyt",
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+      "description": "good food",
+      "imageUrl": "https://nutritionadvance.com/wp-content/uploads/2018/01/several-fresh-carrots-with-intact-green-stems.jpg"
     },
     {
-      "id": "06ec",
-      "name": "ASssssssssssssss",
-      "categoryId": "sobji",
-      "price": 1,
-      "quantity": 1,
-      "productCondition": "New",
-      "description": "asd",
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
-    },
-    {
-      "id": "9cd3",
-      "name": "ASssssssssssssss",
-      "categoryId": "sobji",
-      "price": 2,
+      "id": "70fd",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 20,
       "quantity": 2,
       "productCondition": "New",
-      "description": "g",
-      "imageUrl": "https://myfreelogomaker.com/wp-content/uploads/2020/12/mflm-share-image-1.png"
+      "description": "good",
+      "imageUrl": "https://c8.alamy.com/comp/DNCEHA/single-broccoli-floret-isolated-on-white-clipping-path-included-DNCEHA.jpg"
+    },
+    {
+      "id": "9a0f",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 2,
+      "productCondition": "New",
+      "description": "gfood",
+      "imageUrl": "https://previews.123rf.com/images/usersam2007/usersam20071112/usersam2007111200005/11645815-single-tomato-vegetable-isolated-on-white-background.jpg"
+    },
+    {
+      "id": "028c",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 5,
+      "productCondition": "New",
+      "description": "good",
+      "imageUrl": "https://thumbs.dreamstime.com/b/green-pepper-white-single-vegetable-studio-shot-background-33865357.jpg"
+    },
+    {
+      "id": "d323",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 5,
+      "productCondition": "New",
+      "description": "good",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4swR-gn2EFNYPXD5IIJF2P7lbu_2dWf-aHA&s"
+    },
+    {
+      "id": "d310",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 5,
+      "productCondition": "New",
+      "description": "good",
+      "imageUrl": "https://t3.ftcdn.net/jpg/00/93/87/58/360_F_93875874_u9pFhj8A6MNFchnUgNTAAAWnmIA4F4Y0.jpg"
+    },
+    {
+      "id": "916d",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 15,
+      "quantity": 5,
+      "productCondition": "New",
+      "description": "67u",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50HesumGypsSFoKTWZ9rMbhfCrX5TqNMhDg&s"
+    },
+    {
+      "id": "9c84",
+      "name": "vagitable",
+      "categoryId": "vagitable",
+      "price": 10,
+      "quantity": 21,
+      "productCondition": "New",
+      "description": "gtrere",
+      "imageUrl": "https://thumbs.dreamstime.com/b/green-pepper-white-single-vegetable-studio-shot-background-33865357.jpg"
     }
   ]
 }

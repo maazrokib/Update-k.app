@@ -1,51 +1,24 @@
-<!--
 <app-buyer-nav></app-buyer-nav>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="logo">
-        <img src="https://cdn-icons-png.flaticon.com/512/9203/9203764.png" alt="Profile Picture" class="profile-pic">
-        Buyer Dashboard
-      </div>
-      <div class="sidebar-content">
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="/buyer/profile" class="nav-link">
-              <i class="fas fa-home"></i> Profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/buyer/order-list" class="nav-link">
-              <i class="fas fa-chart-line"></i> Order list
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/buyer/feedback-story" class="nav-link">
-              <i class="fas fa-shopping-cart"></i> Feedback Story
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/buyer/wish" class="nav-link">
-              <i class="fas fa-box"></i> WishList
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/buyer/contract" class="nav-link">
-              <i class="fas fa-box"></i> Contract
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="bottom-content">
-        <div class="user-info">
-          <div class="user-details">
-            <span class="user-name">Mdo</span>
-            <a href="#" class="user-link">
-              <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>> -->
+<div class="sidebar">
+  <h3>Filter Products</h3>
+  
+  <!-- Price Range Filter -->
+  <label for="priceRange">Price Range:</label>
+  <input type="range" id="priceRange" min="0" max="10000" step="100" [(ngModel)]="priceRange" />
+  <p>{{ priceRange }} BDT</p>
+  
+  <!-- Category Filter -->
+  <label for="category">Select Category:</label>
+  <select id="category" [(ngModel)]="selectedCategory">
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+  
+  <!-- Discount Checkbox -->
+  <label>
+    <input type="checkbox" [(ngModel)]="discountOnly" /> Discount Available
+  </label>
+  
+  <button (click)="applyFilters()">Apply Filters</button>
+</div>
+
+

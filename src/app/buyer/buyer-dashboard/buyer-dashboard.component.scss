@@ -1,87 +1,124 @@
-/* সাইডবারের মূল স্টাইল */
 .sidebar {
-  width: 150px;
+  width: 250px;
   height: 100vh;
-  background-color: #1e1e2d; /* গাঢ় রঙ */
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: 'Arial', sans-serif;
-}
-
-/* লোগো অংশের স্টাইল */
-.logo {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #2a2a3d; /* লোগোর ব্যাকগ্রাউন্ড */
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.logo img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-  border-radius: 50%; /* ছবি গোলাকার করা */
-}
-
-/* নেভিগেশন মেনুর স্টাইল */
-.nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item {
-  margin: 10px 0;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-link i {
-  margin-right: 15px;
-  font-size: 20px;
-}
-
-.nav-link:hover {
-  background-color: #4a4a6d; /* হোভার করলে ব্যাকগ্রাউন্ড রঙ পরিবর্তন */
-  color: #ffdd57; /* হোভার করলে টেক্সট রঙ পরিবর্তন */
-  border-radius: 8px; /* সামান্য গোলাকার কোণ */
-}
-
-/* বটম কনটেন্ট (লগআউট সেকশন) */
-.bottom-content {
+  background-color: #63ad69; /* Light background for better contrast */
   padding: 20px;
-  background-color: #2a2a3d; /* নিচের অংশের ব্যাকগ্রাউন্ড */
+  position: fixed;
+  left: 0%;
+  top: 20%;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  overflow-y: auto;
+  transition: transform 0.3s ease; /* Smooth slide-in effect */
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.user-name {
-  font-size: 16px;
+.sidebar h3 {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px;
 }
 
-.user-link {
-  text-decoration: none;
-  color: #ffdd57;
-  font-size: 16px;
-  transition: color 0.3s ease;
+.sidebar label {
+  display: block;
+  font-weight: bold;
+  color: #555555;
+  margin-top: 15px;
+  font-size: 0.9rem;
 }
 
-.user-link:hover {
-  color: #ffffff; /* হোভার করলে টেক্সট রঙ পরিবর্তন */
+.sidebar input[type="range"] {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+}
+
+.sidebar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #28a745;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #28a745;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #555555;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.sidebar select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.sidebar input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #28a745; /* Custom checkbox color */
+  transform: scale(1.2); /* Larger checkbox */
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #218838;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.sidebar button:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  .sidebar h3 {
+    text-align: left;
+  }
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-buyer-dashboard',
-  templateUrl: './buyer-dashboard.component.html',
-  styleUrls: ['./buyer-dashboard.component.scss']
+  selector: 'app-multi-search',
+  templateUrl: './multi-search.component.html',
+  styleUrls: ['./multi-search.component.scss']
 })
-export class BuyerDashboardComponent {
+export class MultiSearchComponent {
   priceRange: number = 5000;
   selectedCategory: string = '';
   discountOnly: boolean = false;
@@ -20,3 +20,5 @@ export class BuyerDashboardComponent {
   }
 }
 
+
+    

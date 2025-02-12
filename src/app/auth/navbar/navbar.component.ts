@@ -1,42 +1,44 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'model/product';
 import { AuthService } from 'src/app/service/auth.service';
+import { HomeService } from 'src/app/service/home.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent  implements OnInit{
-  // ভাষা পরিবর্তন করার জন্য ভেরিয়েবল
-  selectedLanguage: string = 'en';
+export class NavbarComponent  implements OnInit {
+  products: Product[] = [];
+editProduct: any;
 
-  // ভাষা পরিবর্তন করার ফাংশন
-  onLanguageChange(event: any): void {
-    this.selectedLanguage = event.target.value;
-    // এখানে আপনি ভাষা পরিবর্তন করার জন্য লজিক যোগ করতে পারেন (যেমন, ট্রান্সলেশন সার্ভিস ব্যবহার)
+  constructor(private productService: HomeService) {}
+
+  ngOnInit(): void {
+    this.loadProducts();
   }
 
+  loadProducts(): void {
+    this.productService.getProducts().subscribe(
+      (data) => {
+        this.products = data; // Load products into the component
+      },
+      (error) => {
+        console.error('Error loading products:', error);
+      }
+    );
+  }
 
-    isLoggedIn = false;
-    userName = '';
-    userRole = '';
-
-
-    constructor(private authService: AuthService, private router: Router) {}
-
-
-    ngOnInit() {
-      this.isLoggedIn = this.authService.isLoggedIn();
-      this.userName = localStorage.getItem('userName') || '';
-      this.userRole = this.authService.getUserRole();
-      console.log(this.isLoggedIn);
-
-    }
-
-    logout() {
-      this.authService.logout();
-      this.isLoggedIn = false;
-      this.router.navigate(['/login']);
-    }
+  deleteProduct(id: number): void {
+    this.productService.deleteProduct(id).subscribe(
+      () => {
+        this.loadProducts(); // Reload products after deletion
+      },
+      (error) => {
+        console.error('Error deleting product:', error);
+      }
+    );
+  }
 }
+

@@ -168,6 +168,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+
 }
 
 .container {
@@ -270,4 +271,76 @@ body {
   height: 50px;
   margin-bottom: 10px;
   border-radius: 50%; /* ছবি গোলাকার করা */
+}
+/* Card Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between cards */
+  justify-content: center; /* Center align cards */
+}
+
+.col-md-3 {
+  flex: 0 0 calc(25% - 20px); /* 4 cards per row (25% width each) */
+  max-width: calc(25% - 20px);
+  margin: 10px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px; /* Add padding inside the card */
+  padding-left: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures images are not stretched */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-align: left; /* Align text to the left */
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
 }

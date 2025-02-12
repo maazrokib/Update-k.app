@@ -9,8 +9,15 @@ import { Product } from 'model/product';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+applyFilters() {
+throw new Error('Method not implemented.');
+}
   products: Product[] = [];
 editProduct: any;
+priceRange: any;
+selectedCategory: any;
+categories: any;
+discountOnly: any;
 
   constructor(private productService: HomeService) {}
 

@@ -1,10 +1,62 @@
-.form-container {
-    max-width: 3000px;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-  }
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
   
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px; /* Can be adjusted as needed */
+  margin: 0 auto;
+  padding: 20px;
+ 
+  margin-left:17% ; /* Sidebar এর সমান মার্জিন দিবে */
+  padding: 10px;
+  width: calc(100% - 180px); /* Sidebar বাদ দিয়ে পুরো জায়গা নেবে */
+  
+}
+
+/* Section Styling */
+.section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00ff4c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+

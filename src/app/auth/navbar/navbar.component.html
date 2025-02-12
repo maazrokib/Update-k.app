@@ -4,11 +4,16 @@
     <div class="logo">
       <h3>KRISHI-KONTHO</h3>
     </div>
-
-    <!-- Right Side: Search Bar and Extra Links -->
+    <!-- Right Side: Buttons and Extra Links -->
     <div class="header-right">
-      <input type="text" class="search-bar" placeholder="Search..." />
-
+      <div class="button-group">
+        <button ><a routerLink="/home">Home</a></button>
+        <button >All Category</button>
+        <button class="header-button button-b" routerLink="/krishi-story">Krishi Story</button>
+        <button class="header-button button-c" routerLink="/farmer-story">Farmer Story</button>
+        <button class="header-button button-d" routerLink="/apps">Apps</button>
+      </div>
+      <a routerLink="/login" class="login-link">Log-in</a>
       <div class="extra-links">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#f9fcff" class="bi bi-bag-fill" viewBox="0 0 16 16">
           <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
@@ -24,22 +29,22 @@
           <option value="bn">বাংলা</option>
           <option value="hi">हिंदी</option>
         </select>
-        <a routerLink="/login" class="login-link">Login</a>
       </div>
     </div>
   </div>
 </header>
-
+<!-- Search Bar Section -->
+<div class="search-section">
+  <div class="search-container">
+    <input type="text" class="search-bar" placeholder="Search..." />
+  </div>
+</div>
+<!-- Navigation Bar -->
 <nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/g">All cetegorey</a>
-  <a routerLink="/a">Seasonal</a>
-  <a routerLink="/b">Bundle</a>
-  <a routerLink="/c">Newest</a>
-  <a routerLink="/d">Trending</a>
-  <a routerLink="/e">Great Deal</a>
-  <a routerLink="/f">Upcoming</a>
-  <a routerLink="/hge">farmer story</a>
-  <a routerLink="/hg">krishi story</a>
-  
+  <a routerLink="/seasonal">Seasonal</a>
+  <a routerLink="/bundle">Bundle</a>
+  <a routerLink="/newest">Newest</a>
+  <a routerLink="/trending">Trending</a>
+  <a routerLink="/great-deal">Great Deal</a>
+  <a routerLink="/upcoming">Upcoming</a>
 </nav>

@@ -17,6 +17,11 @@ import { LoginBuyerComponent } from './auth/login-buyer/login-buyer.component';
 import { LoginFarmerComponent } from './auth/login-farmer/login-farmer.component';
 import { HomeCreateComponent } from './auth/home-create/home-create.component';
 import { HomeEditComponent } from './auth/home-edit/home-edit.component';
+import { MultiSearchComponent } from './multi-search/multi-search.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -33,6 +38,7 @@ import { HomeEditComponent } from './auth/home-edit/home-edit.component';
     LoginFarmerComponent,
     HomeCreateComponent,
     HomeEditComponent,
+    MultiSearchComponent,
 
 
   ],

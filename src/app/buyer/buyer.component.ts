@@ -1,41 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'model/product';
-import { HomeService } from '../service/home.service';
 
 @Component({
   selector: 'app-buyer',
   templateUrl: './buyer.component.html',
   styleUrls: ['./buyer.component.scss']
 })
-export class BuyerComponent implements OnInit {
-  products: Product[] = [];
-editProduct: any;
+export class BuyerComponent  {
+  priceRange: number = 5000;
+  selectedCategory: string = '';
+  discountOnly: boolean = false;
+  categories: string[] = ['Grains', 'Vegetables', 'Fruits', 'Fish', 'Dairy', 'Others'];
 
-  constructor(private productService: HomeService) {}
-
-  ngOnInit(): void {
-    this.loadProducts();
-  }
-
-  loadProducts(): void {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data; // Load products into the component
-      },
-      (error) => {
-        console.error('Error loading products:', error);
-      }
-    );
-  }
-
-  deleteProduct(id: number): void {
-    this.productService.deleteProduct(id).subscribe(
-      () => {
-        this.loadProducts(); // Reload products after deletion
-      },
-      (error) => {
-        console.error('Error deleting product:', error);
-      }
-    );
+  applyFilters() {
+    console.log({
+      price: this.priceRange,
+      category: this.selectedCategory,
+      discount: this.discountOnly
+    });
   }
 }

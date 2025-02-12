@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'home', component: HomeBuyerComponent },
   { path: 'buyer', component: BuyerComponent },
   { path: 'wish', component: WishlistComponent },
+  { path: 'nav', component: BuyerNavComponent },
 ];
 
 

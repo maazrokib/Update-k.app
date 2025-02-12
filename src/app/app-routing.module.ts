@@ -9,6 +9,10 @@ import { PCetegoryComponent } from './auth/p-cetegory/p-cetegory.component';
 import { GelleryComponent } from './auth/gellery/gellery.component';
 import { HomeCreateComponent } from './auth/home-create/home-create.component';
 import { HomeEditComponent } from './auth/home-edit/home-edit.component';
+import { MultiSearchComponent } from './multi-search/multi-search.component';
+
+
+
 
 
 const routes: Routes = [
@@ -22,6 +26,7 @@ const routes: Routes = [
   { path: 'gellery', component: GelleryComponent },
   { path: 'home-create', component: HomeCreateComponent },
   { path: 'Homeedit', component: HomeEditComponent },
+  { path: 'multi', component: MultiSearchComponent },
   {
     path: 'buyer',
     loadChildren: () =>

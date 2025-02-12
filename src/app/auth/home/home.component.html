@@ -1,51 +1,8 @@
-<header>
-  <div class="header-container">
-    <!-- Left Side: Logo -->
-    <div class="logo">
-      <h3>KRISHI-KONTHO</h3>
-    </div>
 
-    <!-- Right Side: Search Bar and Extra Links -->
-    <div class="header-right">
-      <input type="text" class="search-bar" placeholder="Search..." />
-
-      <div class="extra-links">
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#f9fcff" class="bi bi-bag-fill" viewBox="0 0 16 16">
-          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
-        </svg>
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-        </a>
-        <a href="https://www.youtube.com" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
-        </a>
-        <select class="language-select">
-          <option value="en">English</option>
-          <option value="bn">বাংলা</option>
-          <option value="hi">हिंदी</option>
-        </select>
-        <a routerLink="/login" class="login-link">Login</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/g">All cetegorey</a>
-  <a routerLink="/a">Seasonal</a>
-  <a routerLink="/b">Bundle</a>
-  <a routerLink="/c">Newest</a>
-  <a routerLink="/d">Trending</a>
-  <a routerLink="/e">Great Deal</a>
-  <a routerLink="/f">Upcoming</a>
-  <a routerLink="/hge">farmer story</a>
-  <a routerLink="/hg">krishi story</a>
-  
-</nav>
+<app-multi-search></app-multi-search>
+<!-- Main Content -->
 <div class="container">
   <h2 class="text-center">Product List</h2>
-  
   <div class="row">
     <div class="col-md-4" *ngFor="let product of products">
       <div class="card">
@@ -63,3 +20,55 @@
     </div>
   </div>
 </div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <!-- Footer Section 1: About Us -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>
+        Welcome to Krishi-Kontho, your ultimate platform for agricultural solutions. We aim to empower farmers and provide them with the best resources.
+      </p>
+    </div>
+    <!-- Footer Section 2: Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/categories">All Categories</a></li>
+        <li><a href="/seasonal">Seasonal Products</a></li>
+        <li><a href="/bundle">Bundles</a></li>
+        <li><a href="/newest">Newest Arrivals</a></li>
+      </ul>
+    </div>
+    <!-- Footer Section 3: Contact Us -->
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: supportkrishikontho.com</p>
+      <p>Phone: +8801234567890</p>
+      <p>Address: Dhaka, Bangladesh</p>
+    </div>
+    <!-- Footer Section 4: Social Media -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2023 Krishi-Kontho. All rights reserved.</p>
+  </div>
+</footer>
+
