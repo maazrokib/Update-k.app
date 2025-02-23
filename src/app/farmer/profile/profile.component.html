@@ -1,9 +1,9 @@
-
+<!--
 <app-farmer-dashboard></app-farmer-dashboard>
 <div class="form-container">
   <h2>Farmer Information Form</h2>
 
-  <!-- Profile Image Upload -->
+
   <div class="profile-img-container">
     <label for="profileImage">
       <img *ngIf="farmer.profilePicture" [src]="farmer.profilePicture" alt="Profile Image" class="profile-img">
@@ -12,7 +12,6 @@
     <input type="file" id="profileImage" (change)="onImageUpload($event)" *ngIf="isEditing">
   </div>
 
-  <!-- Farmer Input Form (Editable Form) -->
   <form *ngIf="isEditing" (ngSubmit)="saveFarmer()">
     <label>Name:</label>
     <input type="text" [(ngModel)]="farmer.name" name="name" required>
@@ -41,7 +40,7 @@
     <button type="submit" class="btn-save">Save</button>
   </form>
 
-  <!-- Display Farmer Info (Non-editable View Mode) -->
+
   <div *ngIf="!isEditing">
     <h3>Farmer Profile</h3>
     <img *ngIf="farmer.profilePicture" [src]="farmer.profilePicture" alt="Profile Image" class="profile-img">
@@ -57,4 +56,4 @@
     <p><strong>Join Date:</strong> {{ farmer.joined | date }}</p>
     <button class="btn-edit" (click)="editFarmer()">Edit</button>
   </div>
-</div>
+</div> -->

@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HomeService } from '../../service/home.service';
-import { Product } from 'model/product';
+import { HomeService } from 'src/app/service/home.service';
+
+
 
 @Component({
   selector: 'app-home-edit',
@@ -9,10 +11,18 @@ import { Product } from 'model/product';
   styleUrls: ['./home-edit.component.scss'],
 })
 export class HomeEditComponent implements OnInit {
+goBack() {
+throw new Error('Method not implemented.');
+}
   productForm: FormGroup;
-  @Input() selectedProduct: Product | null = null;
+  productId: number | null = null;
 
-  constructor(private fb: FormBuilder, private productService: HomeService) {
+  constructor(
+    private fb: FormBuilder,
+    private productService: HomeService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     this.productForm = this.fb.group({
       id: [null],
       name: ['', Validators.required],
@@ -26,21 +36,19 @@ export class HomeEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.selectedProduct) {
-      this.productForm.patchValue(this.selectedProduct);
+    this.productId = Number(this.route.snapshot.paramMap.get('id'));
+    if (this.productId) {
+      this.productService.getProductById(this.productId).subscribe((product) => {
+        this.productForm.patchValue(product);
+      });
     }
   }
 
   onSubmit(): void {
     if (this.productForm.valid) {
-      const product: Product = this.productForm.value;
-      this.productService.updateProduct(product).subscribe(() => {
-        this.closeModal();
+      this.productService.updateProduct(this.productForm.value).subscribe(() => {
+        this.router.navigate(['/']); // Update successful -> redirect to home
       });
     }
-  }
-
-  closeModal(): void {
-    // Emit event to close modal
   }
 }

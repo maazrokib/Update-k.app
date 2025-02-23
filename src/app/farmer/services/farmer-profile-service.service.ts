@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FarmerProfile } from 'src/app/model/profile.ts';
+import { FarmerProfile } from 'src/app/model/profile';
 
 @Injectable({
   providedIn: 'root'

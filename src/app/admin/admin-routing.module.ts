@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'market-price', component: MrkPriceComponent },
   { path: 'admin-nav', component: AdminNavComponent },
   { path: 'home-create', component: HomeCreateComponent },
+  { path: 'cetegory', component: ProductCetegoryComponent
+   },
 ];
 
 @NgModule({

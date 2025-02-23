@@ -63,26 +63,6 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50HesumGypsSFoKTWZ9rMbhfCrX5TqNMhDg&s"
     },
     {
-      "id": "aa04",
-      "name": "vagitable",
-      "categoryId": "vagitable",
-      "price": 15,
-      "quantity": 3,
-      "productCondition": "New",
-      "description": "good food",
-      "imageUrl": "https://nutritionadvance.com/wp-content/uploads/2018/01/several-fresh-carrots-with-intact-green-stems.jpg"
-    },
-    {
-      "id": "70fd",
-      "name": "vagitable",
-      "categoryId": "vagitable",
-      "price": 20,
-      "quantity": 2,
-      "productCondition": "New",
-      "description": "good",
-      "imageUrl": "https://c8.alamy.com/comp/DNCEHA/single-broccoli-floret-isolated-on-white-clipping-path-included-DNCEHA.jpg"
-    },
-    {
       "id": "9a0f",
       "name": "vagitable",
       "categoryId": "vagitable",

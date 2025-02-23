@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'model/product';
+
 import { HomeService } from 'src/app/service/home.service';
+import { Product } from 'src/model/product';
 
 @Component({
   selector: 'app-home-buyer',

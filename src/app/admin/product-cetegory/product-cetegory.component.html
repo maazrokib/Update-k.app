@@ -1,2 +1,159 @@
 <app-admin-dashboard></app-admin-dashboard>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown with Sublist</title>
+    <style>
+        /* Basic styling for dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the sublist when hovering over the main item */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown with Sublist</h2>
+<p>Move your mouse over the numbers to see the sublist.</p>
+
+<div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+        <div class="dropdown-item">
+            <span>1. Crops</span>
+            <div class="sublist">
+                <a href="#">Rice</a>
+                <a href="#">Wheat</a>
+                <a href="#">Maize</a>
+                <a href="#">Potato</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>2. Vegetables</span>
+            <div class="sublist">
+                <a href="#">Tomato</a>
+                <a href="#">Eggplant</a>
+                <a href="#">Chili</a>
+                <a href="#">Pumpkin</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>3. Fruits</span>
+            <div class="sublist">
+                <a href="#">Mango</a>
+                <a href="#">Banana</a>
+                <a href="#">Grapes</a>
+                <a href="#">Papaya</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>4. Grains & Pulses</span>
+            <div class="sublist">
+                <a href="#">Lentils</a>
+                <a href="#">Chickpea</a>
+                <a href="#">Red Lentil</a>
+                <a href="#">Mung Bean</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>5. Oil Seeds</span>
+            <div class="sublist">
+                <a href="#">Mustard</a>
+                <a href="#">Sesame</a>
+                <a href="#">Sunflower</a>
+                <a href="#">Cottonseed</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>6. Medicinal Plants</span>
+            <div class="sublist">
+                <a href="#">Neem</a>
+                <a href="#">Tulsi</a>
+                <a href="#">Ginger</a>
+                <a href="#">Lemon Grass</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>7. Fish & Animal Products</span>
+            <div class="sublist">
+                <a href="#">Fish</a>
+                <a href="#">Chicken</a>
+                <a href="#">Eggs</a>
+                <a href="#">Milk</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>8. Processed Food</span>
+            <div class="sublist">
+                <a href="#">Pickles</a>
+                <a href="#">Jam</a>
+                <a href="#">Chips</a>
+                <a href="#">Sauce</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>9. Agricultural Inputs</span>
+            <div class="sublist">
+                <a href="#">Seeds</a>
+                <a href="#">Fertilizers</a>
+                <a href="#">Pesticides</a>
+                <a href="#">Organic Fertilizer</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <span>10. Organic Products</span>
+            <div class="sublist">
+                <a href="#">Organic Vegetables</a>
+                <a href="#">Organic Fruits</a>
+                <a href="#">Organic Pulses</a>
+                <a href="#">Organic Rice</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle hover effect and show sublist
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('mouseover', () => {
+            const sublist = item.querySelector('.sublist');
+            sublist.style.display = 'block';
+        });
+
+        item.addEventListener('mouseout', () => {
+            const sublist = item.querySelector('.sublist');
+            sublist.style.display = 'none';
+        });
+    });
+</script>
+
+</body>
+</html>

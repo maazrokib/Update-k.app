@@ -1,6 +1,5 @@
 
 <app-multi-search></app-multi-search>
-<!-- Main Content -->
 <div class="container">
   <h2 class="text-center">Product List</h2>
   <div class="row">
@@ -15,11 +14,13 @@
           <p class="card-text">Condition: {{ product.productCondition }}</p>
           <p class="card-text">{{ product.description }}</p>
           <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+          <a [routerLink]="['/edit', product.id]" class="btn btn-primary ml-2">Edit</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- Footer -->

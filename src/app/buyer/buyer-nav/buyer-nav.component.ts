@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'model/product';
+
 import { HomeService } from 'src/app/service/home.service';
 
 @Component({
@@ -8,5 +8,5 @@ import { HomeService } from 'src/app/service/home.service';
   styleUrls: ['./buyer-nav.component.scss']
 })
 export class BuyerNavComponent  {
-  
+
 }
