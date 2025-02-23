@@ -8,10 +8,7 @@ import { HomeService } from 'src/app/service/home.service';
   templateUrl: './home-create.component.html',
   styleUrls: ['./home-create.component.scss']
 })
-export class HomeCreateComponent{
-closeModal() {
-throw new Error('Method not implemented.');
-}
+export class HomeCreateComponent {
   productForm: FormGroup;
 
   constructor(
@@ -34,9 +31,12 @@ throw new Error('Method not implemented.');
     if (this.productForm.valid) {
       const product = this.productForm.value;
       this.productService.addProduct(product).subscribe(() => {
-        // Redirect to home page after successful submission
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/admin/home'); // Redirect to home page after successful submission
       });
     }
+  }
+
+  closeModal(): void {
+    this.router.navigateByUrl('/admin/home'); // Close modal and navigate back
   }
 }

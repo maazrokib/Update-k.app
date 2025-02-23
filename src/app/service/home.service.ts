@@ -1,34 +1,37 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from 'src/model/product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomeService {
-
-  private apiUrl = 'http://localhost:3000/auth'; // API URL ঠিক করে নাও
+  private apiUrl = 'http://localhost:8080/api/admin/home'; // Backend API URL
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
+  // Get all products
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/all`);
   }
 
-  getProductById(id: number): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${id}`);
+  // Add a new product
+  addProduct(product: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/add`, product);
   }
 
-  addProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.apiUrl, product);
+  // Get a product by ID
+  getProductById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
   }
 
-  updateProduct(product: Product): Observable<Product> {
-    return this.http.put<Product>(`${this.apiUrl}/${product.id}`, product);
+  // Update a product
+  updateProduct(id: number, product: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/update/${id}`, product);
   }
 
+  // Delete a product
   deleteProduct(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    return this.http.delete<void>(`${this.apiUrl}/delete/${id}`);
   }
 }

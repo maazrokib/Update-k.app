@@ -10,15 +10,9 @@ import { Product } from 'src/model/product';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-applyFilters() {
-throw new Error('Method not implemented.');
-}
   products: Product[] = [];
-editProduct: any;
-priceRange: any;
-selectedCategory: any;
-categories: any;
-discountOnly: any;
+  editProduct: Product | null = null;  // Store the product to edit
+  isEditing: boolean = false;  // Manage modal visibility
 
   constructor(private productService: HomeService) {}
 
@@ -46,5 +40,32 @@ discountOnly: any;
         console.error('Error deleting product:', error);
       }
     );
+  }
+
+  openEditForm(product: Product): void {
+    this.editProduct = { ...product };  // Create a copy of the product to edit
+    this.isEditing = true;  // Show the edit form
+  }
+
+  closeEditForm(): void {
+    this.isEditing = false;  // Close the edit form
+    this.editProduct = null;  // Clear the current product being edited
+  }
+
+  updateProduct(): void {
+    if (this.editProduct) {
+      const productId = this.editProduct.id; // Get the product ID
+      const updatedProduct = { ...this.editProduct }; // Updated product data
+
+      this.productService.updateProduct(productId, updatedProduct).subscribe(
+        () => {
+          this.loadProducts();  // Reload products after update
+          this.closeEditForm();  // Close the edit form
+        },
+        (error) => {
+          console.error('Error updating product:', error);
+        }
+      );
+    }
   }
 }

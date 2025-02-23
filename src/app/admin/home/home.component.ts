@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
 import { HomeService } from "src/app/service/home.service";
 import { Product } from "src/model/product";
-
 
 @Component({
   selector: 'app-home',
@@ -11,7 +9,8 @@ import { Product } from "src/model/product";
 })
 export class HomeComponent implements OnInit {
   products: Product[] = [];
-editProduct: any;
+  editProduct: Product | null = null;  // Store the product to edit
+  isEditing: boolean = false;  // Manage modal visibility
 
   constructor(private productService: HomeService) {}
 
@@ -39,5 +38,32 @@ editProduct: any;
         console.error('Error deleting product:', error);
       }
     );
+  }
+
+  openEditForm(product: Product): void {
+    this.editProduct = { ...product };  // Create a copy of the product to edit
+    this.isEditing = true;  // Show the edit form
+  }
+
+  closeEditForm(): void {
+    this.isEditing = false;  // Close the edit form
+    this.editProduct = null;  // Clear the current product being edited
+  }
+
+  updateProduct(): void {
+    if (this.editProduct) {
+      const productId = this.editProduct.id; // Get the product ID
+      const updatedProduct = { ...this.editProduct }; // Updated product data
+
+      this.productService.updateProduct(productId, updatedProduct).subscribe(
+        () => {
+          this.loadProducts();  // Reload products after update
+          this.closeEditForm();  // Close the edit form
+        },
+        (error) => {
+          console.error('Error updating product:', error);
+        }
+      );
+    }
   }
 }
