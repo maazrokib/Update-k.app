@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Product } from 'src/model/product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomeService {
+  addToCart(product: Product) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:8080/api/admin/home'; // Backend API URL
 
   constructor(private http: HttpClient) {}

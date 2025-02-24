@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2 class="text-center">Your Cart</h2>
+
+  <div *ngIf="cartItems.length === 0" class="text-center">
+    <p>Your cart is empty.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of cartItems">
+      <div class="card">
+        <img [src]="item.product.imageUrl" class="card-img-top" [alt]="item.product.name" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.product.name }}</h5>
+          <p class="card-text">Category: {{ item.product.categoryId }}</p>
+          <p class="card-text">Price: {{ item.product.price | currency }}</p>
+          <p class="card-text">Quantity: {{ item.quantity }}</p>
+          <p class="card-text">Condition: {{ item.product.productCondition }}</p>
+          <p class="card-text">{{ item.product.description }}</p>
+
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-danger w-50" (click)="removeFromCart(item.id)">Remove</button>
+            <button class="btn btn-warning w-50" (click)="clearCart()">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,9 @@ import { LoginFarmerComponent } from './auth/login-farmer/login-farmer.component
 import { HomeCreateComponent } from './auth/home-create/home-create.component';
 import { HomeEditComponent } from './auth/home-edit/home-edit.component';
 import { MultiSearchComponent } from './auth/multi-search/multi-search.component';
+import { AddcardComponent } from './auth/addcard/addcard.component';
+
+
 
 
 
@@ -41,6 +44,7 @@ import { MultiSearchComponent } from './auth/multi-search/multi-search.component
     HomeCreateComponent,
     HomeEditComponent,
     MultiSearchComponent,
+    AddcardComponent,
 
 
   ],

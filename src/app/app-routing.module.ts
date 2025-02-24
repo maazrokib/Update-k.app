@@ -10,6 +10,7 @@ import { GelleryComponent } from './auth/gellery/gellery.component';
 import { HomeCreateComponent } from './auth/home-create/home-create.component';
 import { HomeEditComponent } from './auth/home-edit/home-edit.component';
 import { MultiSearchComponent } from './auth/multi-search/multi-search.component';
+import { AddcardComponent } from './auth/addcard/addcard.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'home-create', component: HomeCreateComponent },
   { path: 'edit/:id', component: HomeEditComponent },
   { path: 'multi', component: MultiSearchComponent },
+  { path: 'cart', component: AddcardComponent },
   {
     path: 'buyer',
     loadChildren: () =>
