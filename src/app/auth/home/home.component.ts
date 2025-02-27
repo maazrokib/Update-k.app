@@ -11,6 +11,7 @@ import { Product } from 'src/model/product';
 export class HomeComponent implements OnInit {
   products: Product[] = [];
   userId: number = 1; // Replace with actual user ID (e.g., from authentication)
+cartCount: any;
 
   constructor(
     private homeService: HomeService,

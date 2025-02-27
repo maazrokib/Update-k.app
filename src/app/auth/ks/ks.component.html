@@ -1,0 +1,31 @@
+
+<app-navbar></app-navbar>
+<div class="container">
+  <h2>Farmer Stories</h2>
+
+  <!-- Story List -->
+  <div *ngFor="let story of stories" class="story-card">
+    <!-- Image -->
+    <img [src]="story.imageUrl" alt="{{ story.storyTitle }}" class="story-image" />
+
+    <!-- Title -->
+    <h3 class="story-title">{{ story.storyTitle }}</h3>
+
+    <!-- Short Description -->
+    <p class="story-short-description">
+      {{ story.storyDetails | slice:0:100 }}... <!-- Show first 100 characters -->
+      <a href="#" (click)="openFullDetails(story)">Read More</a>
+    </p>
+  </div>
+
+  <!-- Full Details Modal -->
+  <div *ngIf="selectedStory" class="modal-overlay">
+    <div class="modal-content">
+      <h3>{{ selectedStory.storyTitle }}</h3>
+      <img [src]="selectedStory.imageUrl" alt="{{ selectedStory.storyTitle }}" class="modal-image" />
+      <p><strong>Details:</strong> {{ selectedStory.storyDetails }}</p>
+      <p><strong>Struggles:</strong> {{ selectedStory.struggles }}</p>
+      <button class="btn btn-secondary" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

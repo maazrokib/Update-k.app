@@ -11,6 +11,8 @@ import { ProductCetegoryComponent } from './product-cetegory/product-cetegory.co
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
 import { HomeCreateComponent } from './home-create/home-create.component';
 import { HomeEditComponent } from './home-edit/home-edit.component';
+import { KStoryComponent } from './k-story/k-story.component';
+import { FarmerstoryComponent } from './farmerstory/farmerstory.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'home-create', component: HomeCreateComponent },
   { path: 'cetegory', component: ProductCetegoryComponent},
   { path: 'edit/:id', component: HomeEditComponent },
+  { path: 'ks', component: KStoryComponent },
+  { path: 'fs', component: FarmerstoryComponent },
 ];
 
 @NgModule({

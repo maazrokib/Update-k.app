@@ -11,9 +11,7 @@ export class AddcardComponent implements OnInit {
   cartItems: any[] = [];
   userId: number = 1; // Replace with actual user ID
 
-  constructor(private cartService: CartService,
-     private homeService: HomeService
-  ) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.loadCartItems();
@@ -22,13 +20,11 @@ export class AddcardComponent implements OnInit {
   loadCartItems(): void {
     this.cartService.getCartItems(this.userId).subscribe(
       (data) => {
-        console.log('Cart Data:', data);  // Check the structure of the response
-        if (data && Array.isArray(data)) {
-          this.cartItems = data;
-        } else {
-          console.error('Invalid cart data:', data);
-          this.cartItems = [];
-        }
+        this.cartItems = data.map(item => ({
+          ...item,
+          totalPrice: item.productPrice * item.quantity // Calculate total price
+        }));
+        console.log('Cart Items:', this.cartItems);
       },
       (error) => {
         console.error('Error loading cart items:', error);
@@ -36,25 +32,13 @@ export class AddcardComponent implements OnInit {
     );
   }
 
-
-  removeFromCart(cartItemId: number): void {
-    this.cartService.removeFromCart(cartItemId).subscribe(
+  removeFromCart(cartId: number): void {
+    this.cartService.deleteCartItem(cartId).subscribe(
       () => {
-        this.loadCartItems();
+        this.cartItems = this.cartItems.filter(item => item.id !== cartId); // Update UI
       },
       (error) => {
-        console.error('Error removing item from cart:', error);
-      }
-    );
-  }
-
-  clearCart(): void {
-    this.cartService.clearCart(this.userId).subscribe(
-      () => {
-        this.cartItems = [];
-      },
-      (error) => {
-        console.error('Error clearing cart:', error);
+        console.error('Error removing cart item:', error);
       }
     );
   }

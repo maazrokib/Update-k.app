@@ -5,27 +5,20 @@ import { Observable } from "rxjs";
 @Injectable({
   providedIn: 'root',
 })
-export class CartService {
-  private apiUrl = 'http://localhost:8080/api'; // Backend API URL
+export class  CartService {
+  private apiUrl = 'http://localhost:8080/api/cart'; // Backend API URL
 
   constructor(private http: HttpClient) {}
 
-  // Add a product to the cart
   addToCart(cartItem: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/cart/add`, cartItem); // Corrected endpoint
+    return this.http.post(`${this.apiUrl}/add`, cartItem);
   }
 
   getCartItems(userId: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/cart/user/${userId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/user/${userId}`);
   }
 
-  // Remove an item from the cart
-  removeFromCart(cartItemId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/cart/delete/${cartItemId}`);
-  }
-
-  // Clear the entire cart for a user
-  clearCart(userId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/cart/clear/${userId}`);
+  deleteCartItem(cartId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/delete/${cartId}`);
   }
 }

@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,6 +11,13 @@ import { HomeService } from 'src/app/service/home.service';
 })
 export class HomeCreateComponent {
   productForm: FormGroup;
+
+  // Category List
+  categories: string[] = [
+    'Vegetables', 'Crops', 'Fruits', 'Dairy', 'Meat', 'Fish', 'Grains', 'Pulses',
+    'Oil Seeds', 'Medicinal Plants', 'Processed Food', 'Agricultural Inputs',
+    'Organic Products', 'Garden & Flowers', 'Transport & Logistics', 'Others'
+  ];
 
   constructor(
     private fb: FormBuilder,

@@ -19,6 +19,8 @@ import { HomeCreateComponent } from './auth/home-create/home-create.component';
 import { HomeEditComponent } from './auth/home-edit/home-edit.component';
 import { MultiSearchComponent } from './auth/multi-search/multi-search.component';
 import { AddcardComponent } from './auth/addcard/addcard.component';
+import { KsComponent } from './auth/ks/ks.component';
+
 
 
 
@@ -45,6 +47,8 @@ import { AddcardComponent } from './auth/addcard/addcard.component';
     HomeEditComponent,
     MultiSearchComponent,
     AddcardComponent,
+    KsComponent,
+
 
 
   ],

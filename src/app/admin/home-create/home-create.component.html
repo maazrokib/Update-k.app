@@ -1,6 +1,6 @@
 <app-admin-dashboard></app-admin-dashboard>
 
-  
+
   <div class="nav">
       <div class="modal-header">
         <h5 class="modal-title">🛒 Add New Product</h5>
@@ -18,10 +18,13 @@
               </small>
             </div>
 
-            <!-- Category ID -->
+            <!-- Category ID (Dropdown) -->
             <div class="col-md-6 form-group">
               <label for="categoryId">📂 Category</label>
-              <input type="text" id="categoryId" class="form-control" formControlName="categoryId" placeholder="Enter category" />
+              <select id="categoryId" class="form-control" formControlName="categoryId">
+                <option value="" disabled selected>-- Select Category --</option>
+                <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+              </select>
               <small *ngIf="productForm.get('categoryId')?.invalid && productForm.get('categoryId')?.touched" class="text-danger">
                 Category is required.
               </small>
@@ -81,6 +84,6 @@
           <button type="submit" class="btn btn-success btn-block" [disabled]="productForm.invalid">✅ Save Product</button>
         </form>
       </div>
-   
+
 </div>
 <router-outlet></router-outlet>

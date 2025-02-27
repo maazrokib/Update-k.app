@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './service/auth.service';
-import { Router } from '@angular/router';
-
 import { HomeService } from './service/home.service';
 import { Product } from 'src/model/product';
 

@@ -37,6 +37,8 @@ import { UpcomingListComponent } from './upcoming-list/upcoming-list.component';
 import { UpcomingEditComponent } from './upcoming-edit/upcoming-edit.component';
 import { CottractCreateComponent } from './cottract-create/cottract-create.component';
 import { CottractEditComponent } from './cottract-edit/cottract-edit.component';
+import { KStoryComponent } from './k-story/k-story.component';
+import { FarmerstoryComponent } from './farmerstory/farmerstory.component';
 
 
 @NgModule({
@@ -74,6 +76,8 @@ import { CottractEditComponent } from './cottract-edit/cottract-edit.component';
     UpcomingEditComponent,
     CottractCreateComponent,
     CottractEditComponent,
+    KStoryComponent,
+    FarmerstoryComponent,
    
   ],
   imports: [
